@@ -1,0 +1,6 @@
+framework module Pods_RickyMortyChalenge {
+  umbrella header "Pods-RickyMortyChalenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
