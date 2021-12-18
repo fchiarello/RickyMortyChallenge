@@ -11,13 +11,13 @@ struct InfoCharacterModel: Codable {
     var count: Int?
     var pages: Int?
     var next: String?
-    var previous: String?
+    var prev: String?
     
     enum CodingKeys: String, CodingKey {
         case count = "count"
         case pages = "pages"
         case next = "next"
-        case previous = "prev"
+        case prev = "prev"
     }
     
     init(from decoder: Decoder) throws {
@@ -25,6 +25,6 @@ struct InfoCharacterModel: Codable {
         count = try values.decodeIfPresent(Int.self, forKey: .count)
         pages = try values.decodeIfPresent(Int.self, forKey: .pages)
         next = try values.decodeIfPresent(String.self, forKey: .next)
-        previous = try values.decode(String.self, forKey: .previous)
+        prev = try values.decode(String.self, forKey: .prev)
     }
 }

@@ -10,12 +10,11 @@
 		8FAB647DED6D97C337C0361D /* Pods_RickyMortyChalengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D31F79B7B478FA1DAFF8506 /* Pods_RickyMortyChalengeTests.framework */; };
 		92235D1026D294FF008CBB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D0F26D294FF008CBB8C /* AppDelegate.swift */; };
 		92235D1226D294FF008CBB8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D1126D294FF008CBB8C /* SceneDelegate.swift */; };
-		92235D1426D294FF008CBB8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D1326D294FF008CBB8C /* ViewController.swift */; };
+		92235D1426D294FF008CBB8C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D1326D294FF008CBB8C /* MainViewController.swift */; };
 		92235D1926D29502008CBB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92235D1826D29502008CBB8C /* Assets.xcassets */; };
 		92235D1C26D29502008CBB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92235D1A26D29502008CBB8C /* LaunchScreen.storyboard */; };
 		92235D2726D29502008CBB8C /* RickyMortyChalengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D2626D29502008CBB8C /* RickyMortyChalengeTests.swift */; };
 		92235D3226D29502008CBB8C /* RickyMortyChalengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92235D3126D29502008CBB8C /* RickyMortyChalengeUITests.swift */; };
-		9225FA6E26D29BEA00DBB03D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225FA6D26D29BEA00DBB03D /* MainViewController.swift */; };
 		9225FA7126D29C1A00DBB03D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225FA7026D29C1A00DBB03D /* DetailViewController.swift */; };
 		9225FA7626D2A07000DBB03D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225FA7526D2A07000DBB03D /* Constants.swift */; };
 		9225FA7B26D2A0B100DBB03D /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225FA7A26D2A0B100DBB03D /* ViewCodeProtocol.swift */; };
@@ -54,7 +53,7 @@
 		92235D0C26D294FF008CBB8C /* RickyMortyChalenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyMortyChalenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92235D0F26D294FF008CBB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92235D1126D294FF008CBB8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92235D1326D294FF008CBB8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92235D1326D294FF008CBB8C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		92235D1826D29502008CBB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92235D1B26D29502008CBB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92235D1D26D29502008CBB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +63,6 @@
 		92235D2D26D29502008CBB8C /* RickyMortyChalengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyMortyChalengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92235D3126D29502008CBB8C /* RickyMortyChalengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyChalengeUITests.swift; sourceTree = "<group>"; };
 		92235D3326D29502008CBB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9225FA6D26D29BEA00DBB03D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9225FA7026D29C1A00DBB03D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9225FA7526D2A07000DBB03D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9225FA7A26D2A0B100DBB03D /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
@@ -192,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9225FA7C26D2A73800DBB03D /* Cells */,
-				9225FA6D26D29BEA00DBB03D /* MainViewController.swift */,
+				92235D1326D294FF008CBB8C /* MainViewController.swift */,
 				9225FA7026D29C1A00DBB03D /* DetailViewController.swift */,
 			);
 			path = Views;
@@ -254,7 +252,6 @@
 				92235D0F26D294FF008CBB8C /* AppDelegate.swift */,
 				92235D1126D294FF008CBB8C /* SceneDelegate.swift */,
 				92235D1A26D29502008CBB8C /* LaunchScreen.storyboard */,
-				92235D1326D294FF008CBB8C /* ViewController.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -515,7 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9225FA7E26D2A75B00DBB03D /* CharacterCollectionViewCell.swift in Sources */,
-				92235D1426D294FF008CBB8C /* ViewController.swift in Sources */,
+				92235D1426D294FF008CBB8C /* MainViewController.swift in Sources */,
 				9225FA7B26D2A0B100DBB03D /* ViewCodeProtocol.swift in Sources */,
 				92235D1026D294FF008CBB8C /* AppDelegate.swift in Sources */,
 				9225FA7126D29C1A00DBB03D /* DetailViewController.swift in Sources */,
@@ -524,7 +521,6 @@
 				92235D1226D294FF008CBB8C /* SceneDelegate.swift in Sources */,
 				9225FA8426D2AAA700DBB03D /* ResultCharacterModel.swift in Sources */,
 				9225FA8826D2AADE00DBB03D /* Service.swift in Sources */,
-				9225FA6E26D29BEA00DBB03D /* MainViewController.swift in Sources */,
 				9225FA7626D2A07000DBB03D /* Constants.swift in Sources */,
 				9225FA8A26D2BB9200DBB03D /* InfoCharacterModel.swift in Sources */,
 			);

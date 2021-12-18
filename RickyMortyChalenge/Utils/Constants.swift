@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let characterListUrl = "https://rickandmortyapi.com/api/character"
+    static let error = "error"
+}
