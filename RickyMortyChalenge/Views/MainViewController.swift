@@ -23,8 +23,7 @@ class MainViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = .blue
-        collectionView.layer.cornerRadius = 10
+        collectionView.backgroundColor = .none
         collectionView.translatesAutoresizingMaskIntoConstraints = true
         return collectionView
     }()
@@ -72,6 +71,9 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let data = viewModel?.charactersList[indexPath.item]{
             print("item at \(indexPath.section)/\(indexPath.item) tapped / \(String(describing: data.name))")
+            let vc = DetailViewController()
+            vc.viewModel = data
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -99,7 +101,6 @@ extension MainViewController: ViewCodeProtocol {
     
     func viewCodeAditionalSetup() {
         view.backgroundColor = .white
-        self.characterCollectionView.layer.cornerRadius = 8
     }
 }
 
@@ -115,8 +116,6 @@ extension MainViewController: MainViewModelDelegate {
             self.characterCollectionView.reloadData()
         }
     }
-    
-    
 }
 
 
