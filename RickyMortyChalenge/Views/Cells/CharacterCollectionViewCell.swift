@@ -10,10 +10,13 @@ import SnapKit
 
 class CharacterCollectionViewCell: UICollectionViewCell {
     lazy var imageView: UIImageView = {
-        let iv = UIImageView(frame: contentView.frame)
-        iv.layer.cornerRadius = self.frame.size.height / 2
-        iv.translatesAutoresizingMaskIntoConstraints = false
+//        let iv = UIImageView(frame: contentView.frame)
+        let iv = UIImageView()
+        iv.layer.masksToBounds = false
+        iv.layer.cornerRadius = (self.frame.height / 2)
         iv.contentMode = .scaleAspectFit
+        iv.layer.borderWidth = 3.0
+        iv.layer.borderColor = UIColor.blue.cgColor
         return iv
     } ()
     
@@ -70,15 +73,16 @@ extension CharacterCollectionViewCell: ViewCodeProtocol {
         }
         
         mainView.snp.makeConstraints { (mkr) in
-            mkr.width.height.equalToSuperview()
+            mkr.height.equalToSuperview()
+            mkr.width.equalToSuperview()
             mkr.center.equalToSuperview()
             mkr.top.equalToSuperview()
         }
         
         imageView.snp.makeConstraints { (mkr) in
             mkr.top.equalToSuperview()
-            mkr.width.equalToSuperview()
-            mkr.height.width.equalTo(75)
+            mkr.height.equalTo(100)
+            mkr.width.equalTo(100)
         }
         
         labelView.snp.makeConstraints { (mkr) in
@@ -90,9 +94,6 @@ extension CharacterCollectionViewCell: ViewCodeProtocol {
     }
     
     func viewCodeAditionalSetup() {
-        self.contentView.layer.cornerRadius = 8
-        self.mainView.layer.cornerRadius = 8
-        self.imageView.layer.cornerRadius = 8
-        self.labelView.backgroundColor = .green
+        self.labelView.backgroundColor = .white
     }
 }

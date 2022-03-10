@@ -12,10 +12,10 @@ class MainViewController: UIViewController {
     
     lazy var charactersLabel: UILabel = {
         let label = UILabel()
-        label.text = "TESTE"
+        label.text = "Personagens"
         label.font = UIFont.systemFont(ofSize: 22)
         label.tintColor = .black
-        label.backgroundColor = .green
+        label.backgroundColor = .white
         return label
     }()
     
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = .none
+        collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = true
         return collectionView
     }()
@@ -70,7 +70,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let data = viewModel?.charactersList[indexPath.item]{
-            print("item at \(indexPath.section)/\(indexPath.item) tapped / \(String(describing: data.name))")
             let vc = DetailViewController()
             vc.viewModel = data
             self.navigationController?.pushViewController(vc, animated: true)
